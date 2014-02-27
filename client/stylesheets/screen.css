@@ -28,7 +28,7 @@ time, mark, audio, video {
 html {
   line-height: 1; }
 
-/* line 24, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.sc */
 ol, ul {
   list-style: none; }
 
@@ -63,35 +63,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*================ CLASSES =================*/
 /* line 24, ../sass/partials/_mixins.scss */
 .popover, .auth-buttons #login-buttons .accounts-dialog, .share-options {
-  background: white;
-  border: 1px solid #f36c3d;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
-  z-index: 100;
-  -webkit-transition: all, 300ms;
-  -moz-transition: all, 300ms;
-  -o-transition: all, 300ms;
-  transition: all, 300ms; }
+     background: none repeat scroll 0 0 white;
+    border: 1px solid #CCCCCC;
+    transition: all 0s ease 0s, all 300ms ease 0s;
+    z-index: 100; }
 
 /* line 32, ../sass/partials/_mixins.scss */
 .grid-block, .post-content, .post-actions li a, .post-message, .comment-content, .comment-new, .error {
   background: #fff;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
   padding: 15px;
-  margin-bottom: 10px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
+  margin-bottom: 10px; }
 
 /* line 40, ../sass/partials/_mixins.scss */
 .cf, .comment-new, .comment-new .comment-submit {
@@ -113,7 +94,7 @@ html, body, .outer-wrapper {
 
 /* line 4, ../sass/partials/_main.scss */
 body {
-  background: #e0f1f7; }
+  background: #fff; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
   /* line 9, ../sass/partials/_main.scss */
@@ -169,7 +150,7 @@ body {
 
 /* line 1, ../sass/partials/_typography.scss */
 body, textarea, input, button, input[type="submit"], input[type="button"] {
-  font-family: "Open Sans", "Proxima Nova Soft", "proxima-nova-soft", "PT SANS", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Helvetica Neue, Helvetica, sans-serif;
   color: #4a4444;
   line-height: 1.6; }
 
@@ -179,10 +160,10 @@ a {
   font-weight: bold; }
   /* line 12, ../sass/partials/_typography.scss */
   a:link, a:visited, a:active {
-    color: #a4a9ab; }
+    color: #000000; }
   /* line 15, ../sass/partials/_typography.scss */
   a:hover {
-    color: #f36c3d; }
+    color: #00FBFF; }
 
 /* line 19, ../sass/partials/_typography.scss */
 h2 {
@@ -625,9 +606,9 @@ body.pageslide-open {
     padding-top: 20px; }
     /* line 19, ../sass/partials/_dropdown.scss */
     .dropdown .dropdown-menu ul {
-      background: white;
+      background-color: #FFFFFF;
       padding: 10px;
-      width: 140px;
+      width: 160px;
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
       -ms-border-radius: 3px;
@@ -638,16 +619,19 @@ body.pageslide-open {
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35); }
       /* line 26, ../sass/partials/_dropdown.scss */
       .dropdown .dropdown-menu ul li a {
-        font-size: 14px; }
+    font-family: Palatino, Times New Roman, Serif; 
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 1px; }
   /* line 33, ../sass/partials/_dropdown.scss */
   .dropdown:hover .dropdown-menu {
     display: block; }
 
 /* line 5, ../sass/partials/_grid.scss */
 .grid {
-  width: 74%;
-  margin-left: 13%;
-  margin-right: 13%;
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-transition: ease-out margin 300ms;
   -webkit-transition-delay: 0ms;
   -moz-transition: ease-out margin 300ms 0ms;
@@ -669,22 +653,12 @@ body.pageslide-open {
 
 /* line 10, ../sass/modules/_header.scss */
 .header {
-  background: #4e555d url("/img/bg-header.png") top center;
-  background-color: #4e555d;
-  margin-bottom: 10px;
-  height: 70px;
-  position: relative;
+    height: 70px;
+    margin-bottom: 40px;
+    position: relative;
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
-  *zoom: 1;
-  -webkit-border-radius: 0 0 3px 3px;
-  -moz-border-radius: 0 0 3px 3px;
-  -ms-border-radius: 0 0 3px 3px;
-  -o-border-radius: 0 0 3px 3px;
-  border-radius: 0 0 3px 3px;
-  -webkit-box-shadow: 0 1px 1px black;
-  -moz-box-shadow: 0 1px 1px black;
-  box-shadow: 0 1px 1px black; }
+  *zoom: 1; }
   /* line 3, ../sass/partials/_mixins.scss */
   .header:before, .header:after {
     content: "";
@@ -699,19 +673,26 @@ body.pageslide-open {
     position: relative;
     z-index: 20; }
   /* line 25, ../sass/modules/_header.scss */
-  .header .logo {
-    position: absolute;
-    display: inline-block;
-    text-align: center;
-    top: 10px;
-    left: 0px;
-    width: 100%;
-    color: white;
-    font-size: 30px;
-    z-index: 10; }
+  .logo {
+    background-color: #000000;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    padding: 5px 15px;
+    text-align: left;}
+
+.logo a, .logo a:visited {
+      color: #fff; }
+.logo:hover {
+      color: #000 !important;
+      background-color: #00FBFF;}
+
     /* line 35, ../sass/modules/_header.scss */
     .header .logo a, .header .logo a:visited {
-      color: white; }
+      color: #fff !important; }
     /* line 38, ../sass/modules/_header.scss */
     .header .logo.image {
       position: absolute;
@@ -745,7 +726,7 @@ body.pageslide-open {
     /* line 85, ../sass/modules/_header.scss */
     .auth-buttons #login-buttons .account-link {
       display: block;
-      color: white !important;
+      color: #000 !important;
       margin-bottom: 10px;
       float: none; }
     /* line 91, ../sass/modules/_header.scss */
@@ -754,10 +735,10 @@ body.pageslide-open {
       color: #4a4444; }
     /* line 95, ../sass/modules/_header.scss */
     .auth-buttons #login-buttons a.login-link-text {
-      color: #fff;
-      font-weight: normal;
-      display: inline-block;
-      height: 26px; }
+    color: #000000;
+    margin-top: 10px;
+    display: inline-block;
+    height: 26px; }
     /* line 101, ../sass/modules/_header.scss */
     .auth-buttons #login-buttons #login-buttons-password {
       float: none !important;
@@ -772,14 +753,14 @@ body.pageslide-open {
       height: 26px;
       margin-right: 10px;
       cursor: pointer;
-      color: white; }
+      color: #00000; }
       /* line 116, ../sass/modules/_header.scss */
       .auth-buttons #login-buttons .login-header:before {
         color: rgba(255, 255, 255, 0.5);
         content: "Welcome, "; }
     /* line 121, ../sass/modules/_header.scss */
     .auth-buttons #login-buttons #login-buttons-logout {
-      color: white;
+      color: #000;
       border: none;
       font-family: inherit;
       font-size: inherit;
@@ -792,7 +773,8 @@ body.pageslide-open {
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
-  margin-top: 20px; }
+  margin-top: 30px;
+  font-family:Palatino,Times New Roman,Serif;}
   /* line 3, ../sass/partials/_mixins.scss */
   .nav:before, .nav:after {
     content: "";
@@ -822,7 +804,7 @@ body.pageslide-open {
       padding-right: 0; }
     /* line 140, ../sass/modules/_header.scss */
     .nav > li > a {
-      color: white;
+      color: #000;
       font-size: 16px;
       line-height: 26px;
       height: 26px;
@@ -853,7 +835,7 @@ body.pageslide-open {
       outline: none; }
   /* line 175, ../sass/modules/_header.scss */
   .search.empty .search-field {
-    background: rgba(255, 255, 255, 0.1); }
+    border: 1px solid #CCCCCC; }
     /* line 177, ../sass/modules/_header.scss */
     .search.empty .search-field:focus {
       background: white; }
@@ -896,13 +878,13 @@ body.pageslide-open {
 
 /* line 21, ../sass/modules/_posts.scss */
 .post-content {
-  position: relative;
-  padding: 0;
-  min-height: 40px;
-  margin-right: 160px; }
+    border-top: 1px solid #EEEEEE;
+    min-height: 40px;
+    padding: 0;
+    position: relative; }
   /* line 28, ../sass/modules/_posts.scss */
   .post-content .post-info {
-    padding: 13px 15px;
+    padding: 20px;
     margin-left: 30px; }
   /* line 32, ../sass/modules/_posts.scss */
   .post-content .post-rank {
@@ -926,13 +908,7 @@ body.pageslide-open {
       height: 100%;
       display: table;
       float: left;
-      width: 30px;
-      -webkit-border-radius: 3px 0 0 3px;
-      -moz-border-radius: 3px 0 0 3px;
-      -ms-border-radius: 3px 0 0 3px;
-      -o-border-radius: 3px 0 0 3px;
-      border-radius: 3px 0 0 3px;
-      border-right: 1px solid #e7eff2; }
+      width: 30px; }
       /* line 59, ../sass/modules/_posts.scss */
       .post-content .post-upvote .upvote-link i {
         font-size: 12px;
@@ -941,8 +917,7 @@ body.pageslide-open {
         width: 100%;
         text-align: center;
         vertical-align: middle;
-        color: #92b5c3;
-        color: #f36c3d;
+        color: #CCCCCC;
         text-shadow: 0px 1px 0px white; }
         /* line 70, ../sass/modules/_posts.scss */
         .post-content .post-upvote .upvote-link i.icon-check {
@@ -955,7 +930,7 @@ body.pageslide-open {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
-        background: #4e555d url("/img/bg-header.png") top center; }
+        background: #CCCCCC; }
         /* line 80, ../sass/modules/_posts.scss */
         .post-content .post-upvote .upvote-link.not-voted:hover i {
           color: white;
@@ -968,18 +943,18 @@ body.pageslide-open {
           display: none; }
         /* line 90, ../sass/modules/_posts.scss */
         .post-content .post-upvote .upvote-link.voted i.icon-check {
-          color: #7ac0e4;
+          color: #cccccc;
           display: table-cell; }
   /* line 97, ../sass/modules/_posts.scss */
   .post-content .post-sticky {
     display: block;
     position: absolute;
     right: 20px;
-    top: 16px;
+    top: 30%;
     font-size: 24px; }
     /* line 103, ../sass/modules/_posts.scss */
     .post-content .post-sticky i {
-      color: #b3c1c6; }
+      color: #000; }
     /* line 106, ../sass/modules/_posts.scss */
     .post-content .post-sticky span {
       display: none; }
@@ -988,21 +963,24 @@ body.pageslide-open {
     margin-bottom: 0px; }
     /* line 112, ../sass/modules/_posts.scss */
     .post-content .post-heading .post-title {
-      font-size: 20px;
-      color: #4a4444;
-      font-weight: normal;
-      line-height: 1; }
+      font-size: 40px;
+      color: #000000;
+      font-family: Palatino, Times new roman, serif;
+      font-weight: bold;
+      line-height: 1;
+      }
       /* line 117, ../sass/modules/_posts.scss */
       .post-content .post-heading .post-title:visited {
-        color: #b5b0b0; }
+        color: #000000; }
       /* line 120, ../sass/modules/_posts.scss */
       .post-content .post-heading .post-title:hover {
-        color: #f36c3d; }
+        text-decoration: underline; }
     /* line 124, ../sass/modules/_posts.scss */
     .post-content .post-heading .post-domain {
-      color: #b3c1c6;
-      font-size: 14px;
-      font-weight: normal; }
+    color: #999999;
+    font-family: Palatino,Times New Roman,serif;
+    font-size: 14px;
+    font-weight: 400; }
     /* line 129, ../sass/modules/_posts.scss */
     .post-content .post-heading .post-category {
       display: inline-block;
@@ -1019,13 +997,14 @@ body.pageslide-open {
       vertical-align: middle; }
       /* line 138, ../sass/modules/_posts.scss */
       .post-content .post-heading .post-category:hover {
-        background: #f36c3d;
+        background: #b62ad4;
         color: white; }
   /* line 144, ../sass/modules/_posts.scss */
   .post-content .post-meta {
     font-size: 13px;
-    color: #b3c1c6;
-    line-height: 1.5; }
+    color: #666666;
+    line-height: 1.5;
+    margin-top:5px;}
 
 /* line 150, ../sass/modules/_posts.scss */
 .post-actions {
@@ -1043,9 +1022,9 @@ body.pageslide-open {
       position: relative;
       display: block;
       padding: 0;
-      width: 70px;
+      width: 50px;
       height: 70px;
-      line-height: 70px;
+      line-height: 50px;
       vertical-align: baseline;
       text-align: center;
       color: #b3c1c6;
@@ -1060,14 +1039,13 @@ body.pageslide-open {
         color: #f8e121; }
       /* line 179, ../sass/modules/_posts.scss */
       .post-actions li a.discuss-link {
-        color: #a3d06d; }
+        color: #999999; }
       /* line 182, ../sass/modules/_posts.scss */
       .post-actions li a.more-link {
         color: #7ac0e4; }
       /* line 185, ../sass/modules/_posts.scss */
       .post-actions li a:hover {
-        background: #4e555d url("/img/bg-header.png") top center;
-        color: white; }
+        color: #00fbff; }
       /* line 189, ../sass/modules/_posts.scss */
       .post-actions li a.voted {
         background: #4e555d;
@@ -1084,7 +1062,7 @@ body.pageslide-open {
         width: 100%;
         height: 20px;
         line-height: 20px;
-        font-size: 11px; }
+        font-size: 11px;}
       /* line 206, ../sass/modules/_posts.scss */
       .post-actions li a .points {
         display: block;
@@ -1168,11 +1146,11 @@ body.pageslide-open {
       height: 100%; }
 
 /* line 285, ../sass/modules/_posts.scss */
-.post.sticky .post-content, .post.sticky .post-actions li a {
-  background: #fffce0; }
+.post.sticky .post-content {
+background: #fffce0; }
 /* line 288, ../sass/modules/_posts.scss */
 .post.sticky .post-actions li a:hover {
-  background: #4e555d url("/img/bg-header.png") top center; }
+  color: #0dfbff; }
 
 /* line 292, ../sass/modules/_posts.scss */
 .more-button {
@@ -1180,14 +1158,17 @@ body.pageslide-open {
   padding-bottom: 10px; }
   /* line 295, ../sass/modules/_posts.scss */
   .more-button a {
-    width: 100%;
+    text-decoration:underline;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.075);
+    color: #000000;
     display: block;
-    height: 70px;
-    background: rgba(0, 0, 0, 0.075);
-    text-align: center;
-    color: white;
-    line-height: 70px;
+    font-family: Palatino, Times New Roman, Serif;
     font-size: 24px;
+    font-weight: normal;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    width: 100%;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
@@ -1568,8 +1549,8 @@ input[type="submit"], button, .button, .auth-buttons #login-buttons #login-butto
   -ms-border-radius: 0px;
   -o-border-radius: 0px;
   border-radius: 0px;
-  background: #f36c3d;
-  color: white;
+  background: #79ff30;
+  color: #000000;
   text-align: center;
   display: block;
   padding: 0px 10px;
@@ -1586,7 +1567,7 @@ input[type="submit"], button, .button, .auth-buttons #login-buttons #login-butto
     pointer-events: none; }
   /* line 114, ../sass/modules/_forms.scss */
   input[type="submit"]:link, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:visited, button:link, button:hover, button:active, button:visited, .button:link, .auth-buttons #login-buttons #login-buttons-password:link, .button:hover, .auth-buttons #login-buttons #login-buttons-password:hover, .button:active, .auth-buttons #login-buttons #login-buttons-password:active, .button:visited, .auth-buttons #login-buttons #login-buttons-password:visited, .btn:link, .btn:hover, .btn:active, .btn:visited {
-    color: white; }
+    color: #000; }
   /* line 117, ../sass/modules/_forms.scss */
   input[type="submit"].inline, button.inline, .button.inline, .auth-buttons #login-buttons .inline#login-buttons-password, .btn.inline {
     display: inline-block; }
@@ -1598,7 +1579,8 @@ input[type="submit"], button, .button, .auth-buttons #login-buttons #login-butto
   border-bottom: 1px solid #dfdbdb; }
   /* line 125, ../sass/modules/_forms.scss */
   .twitter-signup .twitter-button {
-    background: #00aced; }
+    background: none repeat scroll 0 0 #CDFEFF;
+    padding: 20px; }
 
 /* line 129, ../sass/modules/_forms.scss */
 .category-slug {
@@ -1740,8 +1722,8 @@ table {
 .error {
   margin-bottom: 10px;
   text-align: center;
-  background: #f36c3d;
-  color: white; }
+  background: none repeat scroll 0 0 #FFFBCC;
+  color: #000; }
 
 /* line 1, ../sass/modules/_notifications.scss */
 .notifications {
@@ -1750,7 +1732,7 @@ table {
   width: 200px;
   top: 0px;
   left: -200px;
-  background: #f3f3f3;
+  background: #FFF;
   -webkit-transition: ease-out left 400ms;
   -webkit-transition-delay: 0ms;
   -moz-transition: ease-out left 400ms 0ms;
@@ -1762,11 +1744,10 @@ table {
     text-align: center;
     padding: 10px;
     font-size: 13px;
-    border-bottom: 1px solid #dfdbdb;
-    background: #f3f3f3; }
+    background: #000000; }
     /* line 16, ../sass/modules/_notifications.scss */
     .notifications .mark-as-read:link, .notifications .mark-as-read:visited {
-      color: #7ac0e4; }
+      color: #FFF; }
   /* line 20, ../sass/modules/_notifications.scss */
   .notifications ul {
     height: 100%;
@@ -1774,7 +1755,6 @@ table {
     /* line 23, ../sass/modules/_notifications.scss */
     .notifications ul li {
       padding: 10px;
-      border-bottom: 1px solid #dfdbdb;
       font-size: 13px;
       background: white; }
       /* line 28, ../sass/modules/_notifications.scss */
@@ -1784,38 +1764,29 @@ table {
       /* line 32, ../sass/modules/_notifications.scss */
       .notifications ul li.read {
         color: #b3c1c6;
-        background: #f3f3f3; }
+        background: #000; }
   /* line 38, ../sass/modules/_notifications.scss */
   .notifications .notifications-toggle {
+    background-color: #FFFFFF !important;
     display: block;
-    position: absolute;
+    font-family: Helvetica,Arial,Sans-serif;
+    font-size: 13px;
+    font-weight: bold;
     left: 200px;
-    top: 20px;
-    white-space: nowrap;
-    background: white;
-    -webkit-border-radius: 0px 3px 3px 0px;
-    -moz-border-radius: 0px 3px 3px 0px;
-    -ms-border-radius: 0px 3px 3px 0px;
-    -o-border-radius: 0px 3px 3px 0px;
-    border-radius: 0px 3px 3px 0px;
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
     padding: 3px 10px;
-    font-size: 13px; }
+    position: absolute;
+    top: 10px;
+    white-space: nowrap; }
     /* line 49, ../sass/modules/_notifications.scss */
     .notifications .notifications-toggle.no-notifications {
-      background: rgba(255, 255, 255, 0.3);
+      background: none;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
-      box-shadow: none;
-      color: #b3c1c6; }
+      box-shadow: none; }
   /* line 55, ../sass/modules/_notifications.scss */
   .notifications-open .notifications {
     left: 0px;
-    -webkit-box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.15);
-    box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.15); }
+}
 
 /* line 1, ../sass/partials/_mobile.scss */
 .mobile {
@@ -1823,30 +1794,35 @@ table {
 
 /* line 4, ../sass/partials/_mobile.scss */
 .mobile-nav {
-  position: fixed;
-  overflow: auto;
-  width: 280px;
-  left: -280px;
-  top: 0px;
-  bottom: 0px;
-  background: #444;
-  color: white;
-  -webkit-box-shadow: inset -3px 0px 7px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: inset -3px 0px 7px rgba(0, 0, 0, 0.5);
-  box-shadow: inset -3px 0px 7px rgba(0, 0, 0, 0.5); }
+    background: none repeat scroll 0 0 #000000;
+    bottom: 0;
+    color: #FFFFFF;
+    font-size: 30px;
+    left: -280px;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    width: 280px;}
   /* line 15, ../sass/partials/_mobile.scss */
   .mobile-nav ul li {
-    border-bottom: 1px rgba(255, 255, 255, 0.1) solid; }
+ }
     /* line 17, ../sass/partials/_mobile.scss */
     .mobile-nav ul li a {
-      display: block;
-      height: 50px;
-      padding: 0 10px;
-      line-height: 50px; }
+    background-color:#000000;
+    color: #FFFFFF;
+    display: block;
+    font-family: Palatino,Times new roman,serif;
+    font-weight: 400;
+    height: 100px;
+    letter-spacing: 2px;
+    line-height: 100px;
+    padding: 0 10px;
+    text-align: center;
+}
       /* line 22, ../sass/partials/_mobile.scss */
       .mobile-nav ul li a:hover {
-        background: #f36c3d;
-        color: white; }
+        background-color: #FFFFFF;
+        color: #000000; }
 
 /* line 30, ../sass/partials/_mobile.scss */
 .mobile-nav, .content-wrapper {
@@ -1872,23 +1848,39 @@ table {
     left: 280px; }
 
 @media screen and (max-width: 500px) {
+  
+  .logo {
+    color: #000000;
+    display: block;
+    font-size: 12px;
+    margin-left: 90px;
+    margin-right: auto;
+    position: absolute;
+    text-align: left;
+    top: 15px;}
+  
+.header {
+    border-radius: 0;
+    height: 60px;
+}
+
   /* line 50, ../sass/partials/_mobile.scss */
   .header-button, .header .auth-buttons .login-link-and-dropdown-list .login-link-text, .header .mobile-button {
     position: relative;
     display: block;
     margin-top: 10px;
-    background: #f36c3d;
-    color: white;
+    color: #000;
     height: 30px;
     width: 40px; }
+
     /* line 58, ../sass/partials/_mobile.scss */
     .header-button i, .header .auth-buttons .login-link-and-dropdown-list .login-link-text i, .header .mobile-button i {
       position: absolute;
       width: 100%;
       text-align: center;
-      line-height: 30px;
       height: 30px;
-      font-size: 18px; }
+      font-size: 20px;
+      margin-top:5px; }
 
   /* line 67, ../sass/partials/_mobile.scss */
   .mobile {
@@ -1925,11 +1917,15 @@ table {
     border-radius: 0px; }
     /* line 91, ../sass/partials/_mobile.scss */
     .header .logo {
-      top: 0px;
-      left: 0px;
-      font-size: 22px;
-      line-height: 50px;
-      z-index: 10; }
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 13px;
+    left: 0;
+    line-height: 20px;
+    padding: 5px 10px;
+    text-align: center;
+    top: 0;
+    z-index: 10; }
       /* line 98, ../sass/partials/_mobile.scss */
       .header .logo a img {
         height: auto !important;
@@ -1968,9 +1964,9 @@ table {
             position: absolute;
             width: 100%;
             text-align: center;
-            line-height: 30px !important;
-            height: 30px !important;
-            font-size: 18px !important; }
+            line-height: 40px !important;
+            height: 40px !important;
+            font-size: 20px !important; }
     /* line 140, ../sass/partials/_mobile.scss */
     .header .mobile-button {
       z-index: 100; }
@@ -1985,10 +1981,10 @@ table {
         float: right; }
       /* line 153, ../sass/partials/_mobile.scss */
       .header .mobile-button:hover {
-        background: white; }
+        background: none; }
         /* line 155, ../sass/partials/_mobile.scss */
         .header .mobile-button:hover i {
-          color: #f36c3d; }
+          color: #00FBFF; }
 
   /* line 162, ../sass/partials/_mobile.scss */
   .post .post-content {
@@ -2003,10 +1999,9 @@ table {
       padding: 6px 4px 6px 8px; }
     /* line 174, ../sass/partials/_mobile.scss */
     .post .post-content .post-heading .post-title {
-      line-height: 1.2;
+      line-height: 25px;
       display: block;
-      margin-bottom: 4px;
-      font-size: 18px; }
+      font-size: 20px; }
     /* line 180, ../sass/partials/_mobile.scss */
     .post .post-content .post-heading .post-domain {
       line-height: 1;
@@ -2050,3 +2045,21 @@ table {
         /* line 222, ../sass/partials/_mobile.scss */
         .post .post-actions li a .action {
           display: none; } }
+
+
+#login-buttons .login-button, .accounts-dialog .login-button {
+    -moz-user-select: none;
+    background-color: #CDFEFF;
+    background-image: none;
+    background-repeat: repeat-x;
+    border: medium none;
+    border-radius: 0;
+    box-shadow: none;
+    color: #000000;
+    cursor: pointer;
+    font-size: 80%;
+    line-height: 1.5;
+    padding: 4px 8px;
+    text-align: center;
+    text-shadow: none;
+}

@@ -1,6 +1,6 @@
 <template name="nav">
   <header class="header grid">
-
+    <div><h1 class="logo"><a href="/"></img> {{site_title}}</a></h1></div>
     <a id="mobile-menu" href="#menu" class="mobile mobile-button menu"><i class="icon-menu"></i><span>{{i18n "Menu"}}</span></a>
 
     <ul class="nav site-nav desktop">
@@ -55,8 +55,6 @@
           <img src="{{logo_url}}" style="height:{{logo_height}}px;" alt="{{site_title}}"/>
         </a>
       </h1>
-    {{else}}
-      <h1 class="logo"><a href="/">{{site_title}}</a></h1>
     {{/if}}
 
     {{#if canView}}
