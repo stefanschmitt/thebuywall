@@ -669,6 +669,7 @@ body.pageslide-open {
   /* line 19, ../sass/modules/_header.scss */
   .header .site-nav {
     float: left;
+    margin-top:30px;
     margin-left: 20px;
     position: relative;
     z-index: 20; }
@@ -678,21 +679,22 @@ body.pageslide-open {
     color: #FFFFFF;
     display: block;
     float: left;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 2px;
     margin-top: 20px;
     padding: 5px 15px;
     text-align: left;}
 
 .logo a, .logo a:visited {
-      color: #fff; }
+      color: #FFF; }
 .logo:hover {
-      color: #000 !important;
-      background-color: #00FBFF;}
+      color: #fff !important;
+      background-color: #96F8E3;}
 
     /* line 35, ../sass/modules/_header.scss */
     .header .logo a, .header .logo a:visited {
-      color: #fff !important; }
+      color: #FFFFFF !important;
+      font-family:helvetica,arial,sans-serif; }
     /* line 38, ../sass/modules/_header.scss */
     .header .logo.image {
       position: absolute;
@@ -718,11 +720,10 @@ body.pageslide-open {
   position: relative;
   z-index: 20;
   float: right;
-  margin: 20px 10px 0 0; }
+  margin: 25px 10px 0 0; }
   /* line 79, ../sass/modules/_header.scss */
   .auth-buttons #login-buttons {
-    position: relative;
-    line-height: 26px; }
+    position: relative; }
     /* line 85, ../sass/modules/_header.scss */
     .auth-buttons #login-buttons .account-link {
       display: block;
@@ -738,6 +739,7 @@ body.pageslide-open {
     color: #000000;
     margin-top: 10px;
     display: inline-block;
+    font-family: Helvetica, arial, sans-serif;
     height: 26px; }
     /* line 101, ../sass/modules/_header.scss */
     .auth-buttons #login-buttons #login-buttons-password {
@@ -773,7 +775,7 @@ body.pageslide-open {
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
-  margin-top: 30px;
+  margin-top: 25px;
   font-family:Palatino,Times New Roman,Serif;}
   /* line 3, ../sass/partials/_mixins.scss */
   .nav:before, .nav:after {
@@ -954,7 +956,7 @@ body.pageslide-open {
     font-size: 24px; }
     /* line 103, ../sass/modules/_posts.scss */
     .post-content .post-sticky i {
-      color: #000; }
+      color: #d0d0bc; }
     /* line 106, ../sass/modules/_posts.scss */
     .post-content .post-sticky span {
       display: none; }
@@ -1850,6 +1852,7 @@ table {
 @media screen and (max-width: 500px) {
   
   .logo {
+    background-color:#96F8E3;
     color: #000000;
     display: block;
     font-size: 12px;
