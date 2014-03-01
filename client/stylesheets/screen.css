@@ -653,8 +653,8 @@ body.pageslide-open {
 
 /* line 10, ../sass/modules/_header.scss */
 .header {
-    height: 70px;
-    margin-bottom: 40px;
+    /* height: 70px;
+    margin-bottom: 40px;*/ 
     position: relative;
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
@@ -669,31 +669,25 @@ body.pageslide-open {
   /* line 19, ../sass/modules/_header.scss */
   .header .site-nav {
     float: left;
-    margin-top:30px;
-    margin-left: 20px;
     position: relative;
     z-index: 20; }
   /* line 25, ../sass/modules/_header.scss */
   .logo {
-    background-color: #000000;
-    color: #FFFFFF;
+    color: #000;
     display: block;
-    float: left;
-    font-size: 20px;
-    letter-spacing: 2px;
-    margin-top: 20px;
-    padding: 5px 15px;
+    /*float: left;*/
+    font-size: 40px;
+    letter-spacing:-1px;
     text-align: left;}
 
 .logo a, .logo a:visited {
-      color: #FFF; }
+      color: #000; }
 .logo:hover {
-      color: #fff !important;
-      background-color: #96F8E3;}
+      color: #fff !important; }
 
     /* line 35, ../sass/modules/_header.scss */
     .header .logo a, .header .logo a:visited {
-      color: #FFFFFF !important;
+      color: #000 !important;
       font-family:helvetica,arial,sans-serif; }
     /* line 38, ../sass/modules/_header.scss */
     .header .logo.image {
@@ -776,7 +770,7 @@ body.pageslide-open {
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
   margin-top: 25px;
-  font-family:Palatino,Times New Roman,Serif;}
+  font-family: Helvetica, Arial, Sans-Serif;}
   /* line 3, ../sass/partials/_mixins.scss */
   .nav:before, .nav:after {
     content: "";
