@@ -1,12 +1,8 @@
 <template name="nav">
   <header class="header grid">
-    <div><h1 class="logo"><a href="/"></img> {{site_title}}</a></h1></div>
-    <!--<div><h4 style="    background-color: orange;
-    color: #000000;
-    font-family: helvetica;
-    font-weight: bold;
-    line-height: 20px;
-padding: 10px;">*BULLHORN SOUND* Whats up internet!? Welcome to the Buy Wall! Your #1 source* for all need to know Bitcoin news. We like to think of ourselves as the The Wall Street Journal / Gawker / Bloomberg Biz Week /r/bitcoinmarkets...whatever rolled up and smoked in your new Park Ave penthouse. Our small but discerning community hand picks the best articles, and opinion covering trading, drama, and everything crypto. We invite you to join us to post whatever you want. This ain't no pump and dump, welcome to The Buy Wall!</h4></div> s-->
+    <div><h1 class="logo"><a href="/"></img> {{site_title}}</a></h1>  <div>{{> search}}</div></div>
+  <div id="bullhorn">The Buy Wall is a new platform for need-to-know Bitcoin trading news and discussion. We are actively seeking new members to join our small but discerning community of crypto-enthusiasts who hand pick the best articles and discuss the state / future of Bitcoin. We like to think of ourselves as the The Wall Street Journal meets Gawker meets Reddit.
+Welcome to the Buy Wall! See you on the moon.</div>
     <a id="mobile-menu" href="#menu" class="mobile mobile-button menu"><i class="icon-menu"></i><span>{{i18n "Menu"}}</span></a>
 
     <ul class="nav site-nav desktop">
@@ -32,6 +28,7 @@ padding: 10px;">*BULLHORN SOUND* Whats up internet!? Welcome to the Buy Wall! Yo
               <li><a class="pending" href="{{categoryLink}}">{{name}}</a></li>
             {{/each}}
           </ul>
+                  {{> search}}
         </div>
       </li>
       {{/if}}
@@ -53,7 +50,7 @@ padding: 10px;">*BULLHORN SOUND* Whats up internet!? Welcome to the Buy Wall! Yo
     </ul>
 
     {{#if logo_url}}
-      <h1 class="logo image" style="height:{{logo_height}}px; width:{{logo_width}}px; top:{{logo_top}}px; margin-left:{{logo_offset}}px;">
+      <h1 class="logo image" style="height:{{logo_height}}px; width:{{logo_width}}px; top:10px; margin-left:{{logo_offset}}px;">
         <a href="/">
           <img src="{{logo_url}}" style="height:{{logo_height}}px;" alt="{{site_title}}"/>
         </a>
