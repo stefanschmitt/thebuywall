@@ -35,7 +35,7 @@ Meteor.methods({
         numberOfPostsInPast24Hours=numberOfItemsInPast24Hours(user, Posts),
         postInterval = Math.abs(parseInt(getSetting('postInterval', 30))),
         maxPostsPer24Hours = Math.abs(parseInt(getSetting('maxPostsPerDay', 30))),
-        postId = '';
+        postId = '' ;
 
     // only let admins post as another user
     if(isAdmin(Meteor.user()))

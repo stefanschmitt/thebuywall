@@ -40,6 +40,9 @@ Template.post_item.helpers({
   short_score: function(){
     return Math.floor(this.score*1000)/1000;
   },
+  image_url: function(){
+    return this.imageUrl;
+  },
   body_formatted: function(){
     var converter = new Markdown.Converter();
     var html_body=converter.makeHtml(this.body);

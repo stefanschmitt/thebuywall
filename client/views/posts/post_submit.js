@@ -32,7 +32,6 @@ Template.post_submit.rendered = function(){
 Template.post_submit.events({
   'click input[type=submit]': function(e, instance){
     e.preventDefault();
-
     $(e.target).addClass('disabled');
 
     if(!Meteor.user()){
@@ -53,36 +52,81 @@ Template.post_submit.events({
     $('input[name=category]:checked').each(function() {
       categories.push(Categories.findOne($(this).val()));
      });
+    var imageUrl;
+    if ((url != "") && (url != '') && (url != undefined)){
+    Meteor.http.get("http://api.embed.ly/1/extract?key=201131e744b14921894b6517d9b934bc&url="+ $('#url').val() +"&maxwidth=300&maxheight=200&format=json", function (error, result) {
+       data = jQuery.parseJSON(result.content);
+       imageUrl = data.images[0].url;
+      Meteor.http.get("http://i.embed.ly/1/display/crop?key=201131e744b14921894b6517d9b934bc&url="+imageUrl+"&height=75&width=75", function (error, result) {
+        console.log(result);
+      
+      });
+      
+       var properties = {
+            headline: title
+          , body: body
+          , shortUrl: shortUrl
+          , categories: categories
+          , sticky: sticky
+          , submitted: submitted
+          , userId: userId
+          , status: status,
+          imageUrl: imageUrl
+        };
+        if(url){
+          var cleanUrl = (url.substring(0, 7) == "http://" || url.substring(0, 8) == "https://") ? url : "http://"+url;
+          properties.url = cleanUrl;
+        }
+    
+        Meteor.call('post', properties, function(error, post) {
+          if(error){
+            throwError(error.reason);
+            clearSeenErrors();
+            $(e.target).removeClass('disabled');
+            if(error.error == 603)
+              Router.go('/posts/'+error.details);
+          }else{
+            trackEvent("new post", {'postId': post.postId});
+            if(post.status === STATUS_PENDING)
+              throwError('Thanks, your post is awaiting approval.')
+            Router.go('/posts/'+post.postId);
+          }
+        });
+        });
 
-    var properties = {
-        headline: title
-      , body: body
-      , shortUrl: shortUrl
-      , categories: categories
-      , sticky: sticky
-      , submitted: submitted
-      , userId: userId
-      , status: status
-    };
-    if(url){
-      var cleanUrl = (url.substring(0, 7) == "http://" || url.substring(0, 8) == "https://") ? url : "http://"+url;
-      properties.url = cleanUrl;
     }
-
-    Meteor.call('post', properties, function(error, post) {
-      if(error){
-        throwError(error.reason);
-        clearSeenErrors();
-        $(e.target).removeClass('disabled');
-        if(error.error == 603)
-          Router.go('/posts/'+error.details);
-      }else{
-        trackEvent("new post", {'postId': post.postId});
-        if(post.status === STATUS_PENDING)
-          throwError('Thanks, your post is awaiting approval.')
-        Router.go('/posts/'+post.postId);
-      }
-    });
+    else{
+        var properties = {
+            headline: title
+          , body: body
+          , shortUrl: shortUrl
+          , categories: categories
+          , sticky: sticky
+          , submitted: submitted
+          , userId: userId
+          , status: status,
+          imageUrl: imageUrl
+        };
+        if(url){
+          var cleanUrl = (url.substring(0, 7) == "http://" || url.substring(0, 8) == "https://") ? url : "http://"+url;
+          properties.url = cleanUrl;
+        }
+    
+        Meteor.call('post', properties, function(error, post) {
+          if(error){
+            throwError(error.reason);
+            clearSeenErrors();
+            $(e.target).removeClass('disabled');
+            if(error.error == 603)
+              Router.go('/posts/'+error.details);
+          }else{
+            trackEvent("new post", {'postId': post.postId});
+            if(post.status === STATUS_PENDING)
+              throwError('Thanks, your post is awaiting approval.')
+            Router.go('/posts/'+post.postId);
+          }
+        });
+    }
   },
   'click .get-title-link': function(e){
     e.preventDefault();
