@@ -63,16 +63,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*================ CLASSES =================*/
 /* line 24, ../sass/partials/_mixins.scss */
 .popover, .auth-buttons #login-buttons .accounts-dialog, .share-options {
-     background: none repeat scroll 0 0 white;
+    background: none repeat scroll 0 0 white;
     border: 1px solid #CCCCCC;
     transition: all 0s ease 0s, all 300ms ease 0s;
     z-index: 100; }
 
 /* line 32, ../sass/partials/_mixins.scss */
 .grid-block, .post-content, .post-actions li a, .post-message, .comment-content, .comment-new, .error {
-  background: #fff;
-  padding: 15px;
-  margin-bottom: 10px; }
+    min-height: 40px;
+    padding: 30px 0;
+    position: relative;
+}
 
 /* line 40, ../sass/partials/_mixins.scss */
 .cf, .comment-new, .comment-new .comment-submit {
@@ -157,8 +158,7 @@ body, textarea, input, button, input[type="submit"], input[type="button"] {
 
 /* line 9, ../sass/partials/_typography.scss */
 a {
-  text-decoration: none;
-  font-weight: bold; }
+  text-decoration: none; }
   /* line 12, ../sass/partials/_typography.scss */
   a:link, a:visited, a:active {
     color: #000000; }
@@ -257,6 +257,11 @@ h3 {
 /* line 63, ../sass/partials/_icons.scss */
 .icon-right:before {
   content: "\2192"; }
+
+
+#category-news{
+color:#F6804A;
+}
 
 /* line 1, ../sass/partials/_pageslide.scss */
 #pageslide {
@@ -630,7 +635,7 @@ body.pageslide-open {
 
 /* line 5, ../sass/partials/_grid.scss */
 .grid {
-  width: 750px;
+  width: 650px;
   margin-left: auto;
   margin-right: auto;
   -webkit-transition: ease-out margin 300ms;
@@ -879,12 +884,12 @@ body.pageslide-open {
 
 /* line 21, ../sass/modules/_posts.scss */
 .post-content {
+    border-bottom:1px solid #F1F1F1 ;
     min-height: 40px;
-    padding: 10px 0;
+    padding: 30px 0 30px 30px;
     position: relative; }
   /* line 28, ../sass/modules/_posts.scss */
   .post-content .post-info {
-    padding: 20px;
     margin-left: 30px; }
   /* line 32, ../sass/modules/_posts.scss */
   .post-content .post-rank {
@@ -906,7 +911,7 @@ body.pageslide-open {
     /* line 49, ../sass/modules/_posts.scss */
     .post-content .post-upvote .upvote-link {
       height: 100%;
-      display: table;
+      display: none;
       float: left;
       width: 30px; }
       /* line 59, ../sass/modules/_posts.scss */
@@ -966,8 +971,9 @@ body.pageslide-open {
       font-size: 40px;
       color: #000000;
       font-family: Palatino, Times new roman, serif;
-      font-weight: bold;
+      font-weight: normal;
       line-height: 1;
+      letter-spacing:1px;
       }
       /* line 117, ../sass/modules/_posts.scss */
       .post-content .post-heading .post-title:visited {
@@ -983,10 +989,11 @@ body.pageslide-open {
     font-weight: 400; }
     /* line 129, ../sass/modules/_posts.scss */
     .post-content .post-heading .post-category {
-    background-color: #F1F1F1;
+    background: none repeat scroll 0 0 #F1F1F1;
+    color:#999999;
     display: inline-block;
     font-size: 11px;
-    font-weight: normal;
+    font-weight: bold;
     padding: 0 6px;
     vertical-align: middle;
       -webkit-border-radius: 3px;
@@ -998,7 +1005,7 @@ body.pageslide-open {
 
       /* line 138, ../sass/modules/_posts.scss */
       .post-content .post-heading .post-category:hover {
-          background: #b62ad4;
+        background: #b62ad4;
         color: white;
        }
   /* line 144, ../sass/modules/_posts.scss */
@@ -1006,12 +1013,27 @@ body.pageslide-open {
     font-size: 13px;
     color: #666666;
     line-height: 1.5;
-    margin-top:5px;}
+    margin-top:5px;
+    margin-left:60px}
+
+  .post-content .post-meta a{
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.5;
+    margin-top:5px;
+    border-bottom:1px solid #ccc;}
+
+#post-thumb {
+  margin-right:15px;
+  margin-bottom:40px;
+  float:left;
+  height:100%;
+}
 
 #bullhorn {
     color: #000000;
     font-family: helvetica;
-    font-size: 22px;
+    font-size: 19px;
     font-weight: bold;
     line-height: 24px;
 }
@@ -1283,13 +1305,11 @@ background: #fffce0; }
 
 /* line 127, ../sass/modules/_comments.scss */
 .comment-content {
-  position: relative;
-  -webkit-border-radius: 0 3px 3px 3px;
-  -moz-border-radius: 0 3px 3px 3px;
-  -ms-border-radius: 0 3px 3px 3px;
-  -o-border-radius: 0 3px 3px 3px;
-  border-radius: 0 3px 3px 3px;
-  font-size: 14px; }
+    border-top: 1px solid #F1F1F1;
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding: 15px;
+    position: relative; }
   /* line 132, ../sass/modules/_comments.scss */
   .comment-content .comment-main {
     margin-left: 50px; }
@@ -1561,12 +1581,11 @@ input[type="submit"], button, .button, .auth-buttons #login-buttons #login-butto
   -ms-border-radius: 0px;
   -o-border-radius: 0px;
   border-radius: 0px;
-  background: orange;
   color: #000000;
   text-align: center;
   display: block;
   padding: 0px 10px;
-  border: none;
+  border-left: 1px solid #ccc;
   font-size: 16px;
   cursor: pointer;
   margin: 0;
@@ -1824,12 +1843,14 @@ table {
     color: #FFFFFF;
     display: block;
     font-family: Helvetica,Arial,Serif;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 800;
     height: 100px;
     letter-spacing: 2px;
     line-height: 100px;
     padding: 0 20px;
-    text-align: left;
+    text-align: center;
+    text-transform: uppercase;
 }
       /* line 22, ../sass/partials/_mobile.scss */
       .mobile-nav ul li a:hover {
@@ -1861,6 +1882,39 @@ table {
 
 @media screen and (max-width: 500px) {
   
+.post-content {
+    border-bottom: 1px solid #F1F1F1;
+    min-height: 40px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-top: 10px;
+    position: relative;
+}
+  
+  .post-content .post-meta {
+    font-size: 10px;
+    color: #666666;
+    line-height: 1.5;
+    margin-top:5px;
+    margin-left:50px}
+
+  .post-content .post-meta a{
+    font-size: 10px;
+    color: #666666;
+    line-height: 1.5;
+    margin-top:5px;
+    border-bottom:1px solid #ccc;}
+  
+  
+  .post-content .post-heading .post-category {
+    font-size: 10px;}
+
+  .post .post-content .post-heading .post-domain {
+    line-height: 1;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 10px; }
+
   .logo {
     color: #000000;
     display: block;
@@ -1874,6 +1928,12 @@ table {
 .search .search-field {
     display:none; }
 
+
+#post-thumb {
+    float: left;
+    height: 100%;
+    margin-bottom: 50px;
+}
 
 #bullhorn {
 display:none;
@@ -2020,7 +2080,7 @@ display:none;
     /* line 174, ../sass/partials/_mobile.scss */
     .post .post-content .post-heading .post-title {
       display: block;
-      font-size: 30px; }
+      font-size: 20px; }
     /* line 180, ../sass/partials/_mobile.scss */
     .post .post-content .post-heading .post-domain {
       line-height: 1;
@@ -2029,7 +2089,7 @@ display:none;
       font-size: 13px; }
     /* line 187, ../sass/partials/_mobile.scss */
     .post .post-content .post-meta {
-      font-size: 11px; }
+      font-size: 10px; }
       /* line 192, ../sass/partials/_mobile.scss */
       .post .post-content .post-meta .unit {
         font-size: 0; }
