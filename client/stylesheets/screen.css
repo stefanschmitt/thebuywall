@@ -71,7 +71,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 32, ../sass/partials/_mixins.scss */
 .grid-block, .post-content, .post-actions li a, .post-message, .comment-content, .comment-new, .error {
     min-height: 40px;
-    padding: 30px 0;
     position: relative;
 }
 
@@ -132,11 +131,12 @@ body {
 
 /* line 37, ../sass/partials/_main.scss */
 .footer {
-  font-weight: bold;
-  text-align: left;
-  padding: 10px 0 70px 0;
-  line-height:20px;
-  color: rgba(0, 0, 0, 0.4); }
+    color: rgba(0, 0, 0, 0.4);
+    font-size: small;
+    font-weight: normal;
+    line-height: 20px;
+    padding: 10px 0 70px;
+    text-align: center; }
   /* line 43, ../sass/partials/_main.scss */
   .footer.absolute {
     position: absolute; }
@@ -674,6 +674,7 @@ body.pageslide-open {
     clear: both; }
   /* line 19, ../sass/modules/_header.scss */
   .header .site-nav {
+    margin-left: 30px;
     float: left;
     position: relative;
     z-index: 20; }
@@ -695,7 +696,6 @@ body.pageslide-open {
 
     /* line 35, ../sass/modules/_header.scss */
     .header .logo a, .header .logo a:visited {
-    border-bottom: 3px solid #000000;
     color: #000000 !important;
     font-family: helvetica,arial,sans-serif;
     font-size: 20px; }
@@ -1037,15 +1037,17 @@ body.pageslide-open {
 
 #embedly-thumb {
     float: left;
-    margin-bottom: 50px;
-    margin-right: 20px;}
+    margin-bottom: 100px;
+    margin-right: 20px;
+}
 
 #bullhorn {
     color: #000000;
     font-family: Helvetica,arial,sans-serif;
     font-size: 24px;
     line-height: 29px;
-    padding: 30px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 
@@ -1206,12 +1208,13 @@ background: #fffce0; }
   .more-button a {
     color: #000000;
     display: block;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Helvetica,Arial,sans-serif;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: normal;
     height: 70px;
     line-height: 70px;
     text-align: center;
+    text-decoration: underline;
     width: 100%;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -1606,7 +1609,9 @@ input[type="submit"], button, .button, .auth-buttons #login-buttons #login-butto
     pointer-events: none; }
   /* line 114, ../sass/modules/_forms.scss */
   input[type="submit"]:link, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:visited, button:link, button:hover, button:active, button:visited, .button:link, .auth-buttons #login-buttons #login-buttons-password:link, .button:hover, .auth-buttons #login-buttons #login-buttons-password:hover, .button:active, .auth-buttons #login-buttons #login-buttons-password:active, .button:visited, .auth-buttons #login-buttons #login-buttons-password:visited, .btn:link, .btn:hover, .btn:active, .btn:visited {
-    color: #000; }
+    background-color: #CDFEFF;
+    border-radius: 3px;
+    color: #000000; }
   /* line 117, ../sass/modules/_forms.scss */
   input[type="submit"].inline, button.inline, .button.inline, .auth-buttons #login-buttons .inline#login-buttons-password, .btn.inline {
     display: inline-block; }
@@ -1759,10 +1764,12 @@ table {
 
 /* line 1, ../sass/modules/_errors.scss */
 .error {
-  margin-bottom: 10px;
-  text-align: center;
-  background: none repeat scroll 0 0 #FFFBCC;
-  color: #000; }
+    background: none repeat scroll 0 0 #FFFBCC;
+    color: #000000;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: center; }
 
 /* line 1, ../sass/modules/_notifications.scss */
 .notifications {
@@ -1890,7 +1897,8 @@ table {
 
 @media screen and (max-width: 500px) {
   
-.post-content {
+.post-content 
+  {
     border-bottom: 1px solid #F1F1F1;
     min-height: 40px;
     padding-bottom: 10px;
@@ -1904,7 +1912,7 @@ table {
     color: #666666;
     line-height: 1.5;
     margin-top:5px;
-    margin-left:50px}
+    margin-left:70px}
 
   .post-content .post-meta a{
     font-size: 10px;
