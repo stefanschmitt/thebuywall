@@ -20,12 +20,12 @@
           <a class="upvote-link not-voted" href="#"><i class="icon-up"></i><span>{{i18n "Upvote"}}</span></a>
         {{/if}}
       </div>
-              <div id ="post-thumb"><img src="http://i.embed.ly/1/display/crop?key=201131e744b14921894b6517d9b934bc&url={{image_url}}&height=75&width=75" height="75" width="75"></img></div>
       <div class="post-info">
         {{#if sticky}}
           <span class="post-sticky"><i class="icon-pin"></i><span>{{i18n "Sticky"}}</span></span>
         {{/if}}
         <h3 class="post-heading">
+          <div id="embedly-thumb"><img src="http://i.embed.ly/1/display/crop?key=201131e744b14921894b6517d9b934bc&url={{image_url}}&height=50&width=50" class="post-title" height="50" width="50"></img></div>
           <a href="{{postLink}}" class="post-title" target="{{postTarget}}">{{headline}}</a>          
           {{#if url}}<span class="post-domain">{{domain}}</span>{{/if}}
             {{#each categories}}

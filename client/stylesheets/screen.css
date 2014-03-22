@@ -698,7 +698,7 @@ body.pageslide-open {
     border-bottom: 3px solid #000000;
     color: #000000 !important;
     font-family: helvetica,arial,sans-serif;
-    font-size: 35px; }
+    font-size: 20px; }
     /* line 38, ../sass/modules/_header.scss */
     .header .logo.image {
       position: absolute;
@@ -887,11 +887,10 @@ body.pageslide-open {
 .post-content {
     border-bottom: 1px solid #DDDDDD;
     min-height: 40px;
-    padding: 30px;
     position: relative; }
   /* line 28, ../sass/modules/_posts.scss */
   .post-content .post-info {
-    margin-left: 30px; }
+    padding: 30px; }
   /* line 32, ../sass/modules/_posts.scss */
   .post-content .post-rank {
     position: absolute;
@@ -966,15 +965,14 @@ body.pageslide-open {
       display: none; }
   /* line 110, ../sass/modules/_posts.scss */
   .post-content .post-heading {
-    margin-left:50px;
     margin-bottom: 0px; }
     /* line 112, ../sass/modules/_posts.scss */
     .post-content .post-heading .post-title {
     color: #000000;
-    font-family: Palatino, Times New Roman, serif;
-    font-size: 45px;
+    font-family: Palatino,Times New Roman,serif;
+    font-size: 36px;
     font-weight: normal;
-    line-height: 49px;
+    line-height: 39px;
       }
       /* line 117, ../sass/modules/_posts.scss */
       .post-content .post-heading .post-title:visited {
@@ -999,7 +997,7 @@ body.pageslide-open {
     display: inline-block;
     font-size: 11px;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 12px;
     padding: 0 6px;
     vertical-align: top;
       -webkit-border-radius: 3px;
@@ -1037,8 +1035,12 @@ body.pageslide-open {
   height:100%;
 }
 
+#embedly-thumb {
+    float: left;
+    margin-bottom: 50px;
+    margin-right: 20px;}
+
 #bullhorn {
-    background-color: #ffffc7;
     color: #000000;
     font-family: Helvetica,arial,sans-serif;
     font-size: 24px;
@@ -2085,7 +2087,6 @@ display:none;
       width: 30px; }
     /* line 169, ../sass/partials/_mobile.scss */
     .post .post-content .post-info {
-      margin-left: 30px;
       padding: 6px 4px 6px 8px; }
     /* line 174, ../sass/partials/_mobile.scss */
     .post .post-content .post-heading .post-title {
